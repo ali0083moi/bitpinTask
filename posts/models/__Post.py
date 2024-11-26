@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Post(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     content = models.TextField()
 
@@ -16,6 +18,8 @@ class Post(models.Model):
 
     @property
     def average_score(self):
-        if not self.total_users_scored:
+        active_rates = self.rates.filter(is_active=True)
+        if not active_rates.exists():
             return 0
-        return round(self.total_weighted_score / self.total_users_scored, 2)
+        avg_rate = active_rates.aggregate(avg_score=models.Avg("score"))["avg_score"]
+        return round(float(avg_rate), 2)
