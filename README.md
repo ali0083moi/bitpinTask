@@ -110,6 +110,23 @@ String password
 - `POST /api/auth/login/`: Login user
 - `POST /api/auth/logout/`: Logout user
 
+### Using the API
+
+For easier API testing, you can use my Postman collection. When making requests:
+
+1. Include the CSRF token in your headers:
+
+   ```
+   X-CSRFToken: <your-csrf-token>
+   ```
+
+2. Set the session ID cookie:
+   ```
+   sessionid: <your-session-id>
+   ```
+
+You can obtain these values after logging in through the browser or initial authentication request.
+
 ### Posts
 
 - `GET /api/posts/posts/`: List all posts with ratings
