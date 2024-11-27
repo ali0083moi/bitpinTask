@@ -11,16 +11,22 @@ class Post(models.Model):
 
     @property
     def total_weighted_score(self):
-        active_rates = self.rates.filter(is_active=True)
+        active_rates = self.rates.filter(
+            is_active=True, is_pending=False, is_valid=True
+        )
         return sum(rate.score for rate in active_rates)
 
     @property
     def total_users_scored(self):
-        return self.rates.filter(is_active=True).count()
+        return self.rates.filter(
+            is_active=True, is_pending=False, is_valid=True
+        ).count()
 
     @property
     def average_score(self):
-        active_rates = self.rates.filter(is_active=True)
+        active_rates = self.rates.filter(
+            is_active=True, is_pending=False, is_valid=True
+        )
         if not active_rates.exists():
             return 0
         avg_rate = active_rates.aggregate(avg_score=models.Avg("score"))["avg_score"]

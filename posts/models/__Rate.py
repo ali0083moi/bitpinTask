@@ -20,6 +20,7 @@ class Rate(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_pending = models.BooleanField(default=False, db_index=True)
+    is_valid = models.BooleanField(default=True, db_index=True)
 
     def save(self, *args, **kwargs):
         with transaction.atomic():
