@@ -18,7 +18,12 @@ class RecievePostsView(generics.ListAPIView):
             if stats is None:
                 avg_score = post.rates.aggregate(Avg("score"))["score__avg"] or 0
                 avg_score = round(float(avg_score), 2)
-                rate_count = post.rates.filter(is_active=True).count() or 0
+                rate_count = (
+                    post.rates.filter(
+                        is_active=True, is_valid=True, is_pending=False
+                    ).count()
+                    or 0
+                )
                 stats = {"avg_score": avg_score, "rate_count": rate_count}
                 cache.set(cache_key, stats, timeout=60)
 
@@ -40,7 +45,12 @@ class RecievePostDetailView(generics.RetrieveAPIView):
         if stats is None:
             avg_score = post.rates.aggregate(Avg("score"))["score__avg"] or 0
             avg_score = round(float(avg_score), 2)
-            rate_count = post.rates.filter(is_active=True).count() or 0
+            rate_count = (
+                post.rates.filter(
+                    is_active=True, is_valid=True, is_pending=False
+                ).count()
+                or 0
+            )
             stats = {"avg_score": avg_score, "rate_count": rate_count}
             cache.set(cache_key, stats, timeout=60)
 
