@@ -19,12 +19,16 @@ class Rate(models.Model):
     is_active = models.BooleanField(default=True, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    is_pending = models.BooleanField(default=False, db_index=True)
 
     def save(self, *args, **kwargs):
         with transaction.atomic():
             Rate.objects.filter(
                 user=self.user, post=self.post, is_active=True
             ).select_for_update().update(is_active=False)
+
+            if not self.pk:
+                self.is_pending = True
 
             super().save(*args, **kwargs)
 
