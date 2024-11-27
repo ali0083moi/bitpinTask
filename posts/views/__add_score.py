@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.core.cache import cache
 import redis
 from django.conf import settings
+from ..management.commands.process_pending_rates import Command
 
 
 class AddScoreView(APIView):
@@ -43,6 +44,15 @@ class AddScoreView(APIView):
                     {"avg_score": new_avg_score, "rate_count": new_rate_count},
                     timeout=ttl,
                 )
+
+            cache_key = "is_pending_count"
+            cached_data = cache.get(cache_key)
+            if cached_data:
+                cache.set(cache_key, cached_data + 1, timeout=None)
+                if cached_data + 1 >= 500:
+                    Command().process_pending_rates(cached_data + 1)
+            else:
+                cache.set(cache_key, 1, timeout=None)
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
