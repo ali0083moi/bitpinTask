@@ -4,8 +4,11 @@ from .__rate_serializer import RateSerializer
 
 
 class PostSerializer(serializers.ModelSerializer):
-    average_rate = serializers.FloatField(source="average_score", read_only=True)
+    average_rate = serializers.SerializerMethodField()
     user_rate = serializers.SerializerMethodField()
+
+    def get_average_rate(self, obj):
+        return getattr(obj, "_cached_average_score", obj.average_score)
 
     def get_user_rate(self, obj):
         request = self.context.get("request")
