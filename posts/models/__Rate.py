@@ -27,3 +27,6 @@ class Rate(models.Model):
             ).select_for_update().update(is_active=False)
 
             super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.post.title} - {self.score}"

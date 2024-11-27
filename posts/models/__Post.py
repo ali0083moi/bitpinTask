@@ -25,3 +25,6 @@ class Post(models.Model):
             return 0
         avg_rate = active_rates.aggregate(avg_score=models.Avg("score"))["avg_score"]
         return round(float(avg_rate), 2)
+
+    def __str__(self):
+        return f"{self.title} - {self.author.username}"
