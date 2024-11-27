@@ -12,15 +12,18 @@ class RecievePostsView(generics.ListAPIView):
     def get_queryset(self):
         queryset = super().get_queryset()
         for post in queryset:
-            cache_key = f"post_avg_score_{post.id}"
-            avg_score = cache.get(cache_key)
+            cache_key = f"post_stats_{post.id}"
+            stats = cache.get(cache_key)
 
-            if avg_score is None:
+            if stats is None:
                 avg_score = post.rates.aggregate(Avg("score"))["score__avg"] or 0
                 avg_score = round(float(avg_score), 2)
-                cache.set(cache_key, avg_score, timeout=15)
+                rate_count = post.rates.filter(is_active=True).count() or 0
+                stats = {"avg_score": avg_score, "rate_count": rate_count}
+                cache.set(cache_key, stats, timeout=60)
 
-            post._cached_average_score = avg_score
+            post._cached_average_score = stats["avg_score"]
+            post._cached_rate_count = stats["rate_count"]
 
         return queryset
 
@@ -31,13 +34,16 @@ class RecievePostDetailView(generics.RetrieveAPIView):
 
     def get_object(self):
         post = super().get_object()
-        cache_key = f"post_avg_score_{post.id}"
-        avg_score = cache.get(cache_key)
+        cache_key = f"post_stats_{post.id}"
+        stats = cache.get(cache_key)
 
-        if avg_score is None:
+        if stats is None:
             avg_score = post.rates.aggregate(Avg("score"))["score__avg"] or 0
             avg_score = round(float(avg_score), 2)
-            cache.set(cache_key, avg_score, timeout=15)
+            rate_count = post.rates.filter(is_active=True).count() or 0
+            stats = {"avg_score": avg_score, "rate_count": rate_count}
+            cache.set(cache_key, stats, timeout=60)
 
-        post._cached_average_score = avg_score
+        post._cached_average_score = stats["avg_score"]
+        post._cached_rate_count = stats["rate_count"]
         return post
