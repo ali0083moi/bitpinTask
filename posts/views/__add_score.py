@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from django.core.cache import cache
+import redis
+from django.conf import settings
 
 
 class AddScoreView(APIView):
@@ -17,10 +19,17 @@ class AddScoreView(APIView):
             new_rate = serializer.save()
 
             cache_key = f"post_stats_{request.data['post']}"
+            django_key = cache.make_key(cache_key)
             cached_data = cache.get(cache_key)
 
-            if cached_data:
+            redis_client = redis.StrictRedis.from_url(
+                settings.CACHES["default"]["LOCATION"]
+            )
+            ttl = redis_client.ttl(django_key)
+            if ttl < 0:  # Key doesn't exist (-2) or no expiry (-1)
+                ttl = 60
 
+            if cached_data:
                 avg_score = float(cached_data["avg_score"])
                 rate_count = int(cached_data["rate_count"])
 
@@ -32,7 +41,7 @@ class AddScoreView(APIView):
                 cache.set(
                     cache_key,
                     {"avg_score": new_avg_score, "rate_count": new_rate_count},
-                    timeout=60,
+                    timeout=ttl,
                 )
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)
