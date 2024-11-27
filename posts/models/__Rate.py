@@ -6,15 +6,17 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Rate(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="rates")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, db_index=True)
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="rates", db_index=True
+    )
     score = models.FloatField(
         validators=[
             MinValueValidator(0.0, message="Score must be at least 0.0"),
             MaxValueValidator(5.0, message="Score cannot exceed 5.0"),
         ]
     )
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
