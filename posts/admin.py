@@ -12,7 +12,15 @@ admin.site.register(Post, PostAdmin)
 
 
 class RateAdmin(admin.ModelAdmin):
-    list_display = ["id", "user", "post", "score", "created_at"]
+    list_display = [
+        "id",
+        "user",
+        "post",
+        "score",
+        "created_at",
+        "is_pending",
+        "is_active",
+    ]
     search_fields = ["user__username", "post__title"]
     list_filter = ["created_at"]
 
