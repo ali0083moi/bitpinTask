@@ -115,3 +115,45 @@ String password
 - `GET /api/posts/posts/`: List all posts with ratings
 - `GET /api/posts/posts/<id>/`: Get specific post details
 - `POST /api/posts/add-score/`: Add rating to a post
+
+## Cron Jobs
+
+- `python manage.py process_ratings`: Process pending ratings
+
+### run:
+
+1. Make the script executable:
+
+```bash
+chmod +x scripts/run_pending_rates.sh
+```
+
+2. Open crontab editor:
+
+```bash
+crontab -e
+```
+
+3. Add the following line to run every
+
+```bash
+0 * * * * /path/to/your/scripts/run_pending_rates.sh
+```
+
+4. Verify cron job is added:
+
+```bash
+crontab -l
+```
+
+Note: Replace `/path/to/your` with the actual absolute path to your project directory.
+
+The cron schedule explained:
+
+- `0`: Minute (0-59)
+- `*`: Hour (0-23)
+- `*`: Day of month (1-31)
+- `*`: Month (1-12)
+- `*`: Day of week (0-6, 0 is Sunday)
+
+This configuration will run the pending rates processing script at the beginning of every hour.
