@@ -3,6 +3,7 @@ from django.core.cache import cache
 from django.db.models import Avg
 from ..serializers import PostSerializer
 from ..models import Post
+from ..enums import RateThresholds
 
 
 class RecievePostsView(generics.ListAPIView):
@@ -25,7 +26,7 @@ class RecievePostsView(generics.ListAPIView):
                     or 0
                 )
                 stats = {"avg_score": avg_score, "rate_count": rate_count}
-                cache.set(cache_key, stats, timeout=60)
+                cache.set(cache_key, stats, timeout=RateThresholds.TIME_TO_CACHE.value)
 
             post._cached_average_score = stats["avg_score"]
             post._cached_rate_count = stats["rate_count"]
@@ -52,7 +53,7 @@ class RecievePostDetailView(generics.RetrieveAPIView):
                 or 0
             )
             stats = {"avg_score": avg_score, "rate_count": rate_count}
-            cache.set(cache_key, stats, timeout=60)
+            cache.set(cache_key, stats, timeout=RateThresholds.TIME_TO_CACHE.value)
 
         post._cached_average_score = stats["avg_score"]
         post._cached_rate_count = stats["rate_count"]

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .__Post import Post
 from django.db import transaction
 from django.core.validators import MinValueValidator, MaxValueValidator
+from ..enums import RateLimits
 
 
 class Rate(models.Model):
@@ -12,8 +13,12 @@ class Rate(models.Model):
     )
     score = models.FloatField(
         validators=[
-            MinValueValidator(0.0, message="Score must be at least 0.0"),
-            MaxValueValidator(5.0, message="Score cannot exceed 5.0"),
+            MinValueValidator(
+                RateLimits.MINIMUM_SCORE.value, message="Score must be at least 0.0"
+            ),
+            MaxValueValidator(
+                RateLimits.MAXIMUM_SCORE.value, message="Score cannot exceed 5.0"
+            ),
         ]
     )
     is_active = models.BooleanField(default=True, db_index=True)

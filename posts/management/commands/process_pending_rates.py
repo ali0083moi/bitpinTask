@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from django.core.cache import cache
 from posts.models import Rate
 from django.utils import timezone
+from posts.enums import RateThresholds, CacheKeys
 
 
 class Command(BaseCommand):
@@ -28,23 +29,28 @@ class Command(BaseCommand):
             post = rates[0].post
             current_avg = post.average_score
 
-            threshold = 0.8
             if active_rates.count() == 0:
                 is_valid = True
             else:
-                is_valid = abs(pending_avg - current_avg) <= threshold
+                is_valid = (
+                    abs(pending_avg - current_avg)
+                    <= RateThresholds.SCORE_DEVIATION.value
+                )
 
             Rate.objects.filter(id__in=[r.id for r in rates]).update(
                 is_pending=False, is_valid=is_valid
             )
 
-        cache.set("is_pending_count", 0)
+        cache.set(CacheKeys.PENDING_COUNT.value, 0)
 
     def handle(self, *args, **options):
         current_hour = timezone.now().hour
-        pending_count = cache.get("is_pending_count") or 0
+        pending_count = cache.get(CacheKeys.PENDING_COUNT.value) or 0
 
-        if pending_count >= 500 or current_hour == 2:
+        if (
+            pending_count >= RateThresholds.BATCH_SIZE.value
+            or current_hour == RateThresholds.PROCESSING_HOUR.value
+        ):
             print(f"Processing {pending_count} pending rates")
             self.process_pending_rates(pending_count)
         else:

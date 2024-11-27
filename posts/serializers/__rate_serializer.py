@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from ..models import Rate
+from ..enums import RateLimits
 
 
 class RateSerializer(serializers.ModelSerializer):
@@ -16,6 +17,8 @@ class RateSerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "created_at"]
 
     def validate_score(self, value):
-        if not (0 <= value <= 5):
+        if not (
+            RateLimits.MINIMUM_SCORE.value <= value <= RateLimits.MAXIMUM_SCORE.value
+        ):
             raise serializers.ValidationError("Score must be between 0 and 5")
         return value

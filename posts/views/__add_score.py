@@ -9,6 +9,7 @@ from django.core.cache import cache
 import redis
 from django.conf import settings
 from ..management.commands.process_pending_rates import Command
+from ..enums import RateThresholds
 
 
 class AddScoreView(APIView):
@@ -28,7 +29,7 @@ class AddScoreView(APIView):
             )
             ttl = redis_client.ttl(django_key)
             if ttl < 0:  # Key doesn't exist (-2) or no expiry (-1)
-                ttl = 60
+                ttl = RateThresholds.TIME_TO_CACHE.value
 
             if cached_data:
                 avg_score = float(cached_data["avg_score"])
