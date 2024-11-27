@@ -1,0 +1,663 @@
+{
+	"info": {
+		"_postman_id": "4a709b3f-6516-44fc-ae98-1c533abbb2f7",
+		"name": "bitpin project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37679844"
+	},
+	"item": [
+		{
+			"name": "get-all-posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:16:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12823"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"American level friend tree.\",\n        \"content\": \"Per thousand local imagine. Thank against draw fact.\\nWonder because game style religious. Measure thought kitchen develop state happen young.\\nWhen occur bed party method black real. Economy half later section leg.\\nAcross reduce without while agent. Top relate serve.\\nLanguage total blue training boy increase go. Federal grow make oil method star computer. Reality mouth recently right soon tax.\",\n        \"author\": 3,\n        \"average_rate\": 1.94,\n        \"user_rate\": 1.98,\n        \"user_rate_count\": 2,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Evidence so country security ability suddenly go.\",\n        \"content\": \"Worker hundred main stand. Outside fall her watch wonder sell easy. Receive left whom.\\nCatch arm structure whose. Think bank wife glass treat represent including.\\nCustomer good group need current. During be country physical.\\nType place cover two else nearly player. Nation whole yes a positive few court former.\\nBaby report interview explain pretty director behind. Ability cut put step.\\nThroughout agreement help unit international defense hear. Human career name field manager challenge time.\",\n        \"author\": 1,\n        \"average_rate\": 5,\n        \"user_rate\": 5,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Seem interesting ago other ball value.\",\n        \"content\": \"Century couple interesting thus small. Rate student debate move do far.\\nOr public mission step door any. Specific adult area rate several material. Foreign hot alone responsibility teacher member.\\nEven country much. Individual deep detail support major college a.\\nOk important will sound seek serve.\\nModern way sister each. Low customer whose stock structure amount.\\nInternational newspaper some part be benefit recent how. Character land suddenly. Feel past knowledge entire my available.\",\n        \"author\": 1,\n        \"average_rate\": 2.93,\n        \"user_rate\": 5,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Church among live carry capital affect.\",\n        \"content\": \"With cost human. Various money light look detail bar.\\nStudy among ok model. North event interesting idea.\\nSuch decade cost beautiful. Vote would spend.\\nThree Mr me serve. Front your image happen man when dinner. Child man approach hour later quality impact. Skin seat attack myself ahead reveal.\\nSite range low only term. Traditional section very great difference across authority. General air look structure.\\nFind choose life speak. Wind old grow. Capital Republican main room glass sign cost.\",\n        \"author\": 4,\n        \"average_rate\": 5,\n        \"user_rate\": 5,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Charge senior relate main.\",\n        \"content\": \"Across old base discussion. Agency while physical determine easy attention wonder.\\nKeep blood figure suddenly item my unit. Together possible talk example message politics full.\\nExpect top decision subject edge. Current investment art performance help bring teacher class. Form it fill everyone player result at. Section school phone experience senior store.\\nRecognize eye we job cost well such. Agency state perhaps energy simply hold.\",\n        \"author\": 2,\n        \"average_rate\": 1.98,\n        \"user_rate\": 1.98,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"These human determine book large stand.\",\n        \"content\": \"Camera writer partner guy hold. Candidate movement question such wear.\\nListen say difficult each too same. Report show street.\\nOn gas unit spring light into movement. Around business issue character stuff human important.\\nVote miss customer ready.\\nCell finally lot rule score class. Now until respond within. Feel third nearly form building.\\nGo involve summer plant movie. Despite me affect article effect particular remain.\",\n        \"author\": 1,\n        \"average_rate\": 1.98,\n        \"user_rate\": 1.98,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Tonight fish pressure size go.\",\n        \"content\": \"Continue single type western. Art key party perhaps.\\nFact analysis prevent. Raise up discover smile event though. Into every single anyone.\\nA nation democratic current game. Us another certainly mention major century ok. In receive happen wall.\\nBeat involve son do west Congress. Big ahead manage. Paper on only quite name must accept. Seek down sell rule.\\nDiscussion west beautiful discuss. Opportunity significant case participant consumer growth either. Way east leader forget country west.\",\n        \"author\": 4,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Person debate whatever hotel.\",\n        \"content\": \"With enter take through arm. Appear again education forget thousand window method.\\nAction site professor property front. Either wear itself. Compare natural report raise today.\\nWay could light. Few force security. Either sit team statement fall trial serious.\\nOrganization religious campaign test whether but. Democrat student unit good.\\nValue see standard. Behavior camera agreement color first professional.\\nDetail sea performance pass field finally.\\nReason health seem.\",\n        \"author\": 5,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"About space organization begin person form see.\",\n        \"content\": \"Religious court set off three say. Where sort happy film couple black.\\nAttorney season will challenge can.\\nBest establish try computer for. One true go south writer design keep. Another house chance through.\\nPast especially enough know task raise. Sing ability nor in son grow.\\nThought tree clear indeed American. Particular family other of hold might. Wish those science why discuss.\",\n        \"author\": 1,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Street power yeah anything.\",\n        \"content\": \"Research red summer rate anyone. Career dark card relationship. Agree under candidate less.\\nBook clear father really dinner leader. Machine majority listen huge cold walk.\\nCentral individual hold popular including. Bag degree often cell property cup. West run least employee cell suggest weight.\\nReality seem performance order success. Worry leader indicate newspaper writer. Industry design close he rather rock summer.\",\n        \"author\": 3,\n        \"average_rate\": 1.98,\n        \"user_rate\": 1.98,\n        \"user_rate_count\": 1,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Beyond tough work hotel soon.\",\n        \"content\": \"Himself follow when hair. Doctor example say full. Put bit husband result.\\nImportant effort practice others fly fund include. Federal security but attorney no concern. Other me push herself hair.\\nEdge go participant agent race. Per approach situation front skill fish. Service speech to explain pattern concern issue.\\nParticipant much truth start design top. Despite war whom past. Hope address simply public here add.\\nEasy prevent eat such remain have. Study rise part green manager interview.\",\n        \"author\": 1,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Option still late office.\",\n        \"content\": \"True camera system official job add her.\\nSend your adult less theory soldier get. Interesting sea management customer Mr everybody.\\nHot while fund structure. Television high finish central take it.\\nYet mission simply step sit become. Heart listen police across country determine suddenly. Them get western his yourself support effort weight.\\nTend name wide how. All sign develop page station.\",\n        \"author\": 2,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Hand structure street once treat difficult young.\",\n        \"content\": \"Her others because whom safe.\\nComputer popular voice itself enough history bit.\\nRadio issue base suffer. Travel meet compare yourself. Need character detail open central actually.\\nOr rise option kind actually available. Such practice serve message green land able. International stock specific recently church room.\\nLikely allow recognize raise buy. Create worry treatment easy. Against smile table state.\",\n        \"author\": 3,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Condition already social not worker building.\",\n        \"content\": \"Number camera become develop church. Might hit simply anything. Same sport fall but read whom.\\nOver tend statement. Turn safe decade benefit all friend stay. Fund within pull peace far.\\nModern personal choice process. Meet add thousand plan or institution accept. Collection imagine rock site attack line.\\nBillion she impact woman teach sometimes. Wide yeah worry top family hear.\",\n        \"author\": 2,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 15,\n        \"title\": \"State name speak may role road sport.\",\n        \"content\": \"Compare own song consumer.\\nInterest already marriage environmental surface today hair. Decide per success surface control. Raise him worker material debate big.\\nRather suddenly move finish. Indicate determine guy eye personal game myself. Laugh point skill relationship help.\\nWin ahead bad. Board do these television.\\nScene election different recognize other. Myself various physical.\\nFirm true attention friend look employee interest. Cause test rather yet. Billion serious indicate with.\",\n        \"author\": 3,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 16,\n        \"title\": \"Can traditional probably soon boy.\",\n        \"content\": \"Friend might on positive. Class positive student sound writer recent. Still wonder color floor court throw. Here human according sell condition.\\nSouth stuff sit. Hotel expert democratic understand.\\nNone buy view. Opportunity ask box whom our enough. Late house character religious enter move. He process peace growth development imagine.\\nInternational society bank social glass of you.\\nExpect operation wish. Suffer body inside entire. Tonight onto environment test worry use.\",\n        \"author\": 3,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 17,\n        \"title\": \"Would close old drop front hour real.\",\n        \"content\": \"Campaign rate off education. Close stand but main.\\nWalk perhaps west fight.\\nInteresting ten billion feeling. Collection owner such vote apply something.\\nSituation experience mouth threat itself huge. Feel poor vote table turn information. Set oil identify someone power.\\nSay window table whether. Common crime share religious technology church play.\\nStyle home bed win start. Six reduce minute.\\nAir purpose condition your bank speak.\",\n        \"author\": 5,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 18,\n        \"title\": \"Hour back within of prepare many.\",\n        \"content\": \"Movie collection summer may amount.\\nGet particular generation high. That hospital maybe service.\\nLife mouth involve star wide if and. Wish company well trade couple kid bring.\\nInstead issue face main see name age. Hour recognize test of.\\nMeasure day wall all term everything. Mission small matter line consumer ten wife environmental. Black determine event anyone weight town summer.\\nAnd painting military group.\\nWater expect production east officer. Car them where human once far.\",\n        \"author\": 4,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 19,\n        \"title\": \"Require cost coach.\",\n        \"content\": \"Strategy oil nation free receive project. Detail service exactly center line almost.\\nEnter last professional nothing he tree might. Company with health society rest. Kid keep example Republican write blue oil. Current field trial throw positive.\\nEnjoy order store save above find wide. Line affect art since recently trip every. Here trial include war.\\nChurch sell movement talk woman six feeling. Case despite rise move. Difficult standard another watch company produce.\",\n        \"author\": 1,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    },\n    {\n        \"id\": 20,\n        \"title\": \"Perhaps wait institution describe authority phone three within.\",\n        \"content\": \"Yourself discuss street total. International society say according side somebody. Offer Mr fine eight.\\nUnder under message best particularly father scientist. Later second later group.\\nMention mother foreign seem. Hundred almost black clearly available maybe. Brother admit course admit image there law.\\nDecide push day change natural out base identify. Another floor management but yeah assume rule. Current compare left include personal.\",\n        \"author\": 1,\n        \"average_rate\": 0,\n        \"user_rate\": null,\n        \"user_rate_count\": 0,\n        \"created_at\": \"2024-11-26\",\n        \"updated_at\": \"2024-11-26\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get-post-details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:18:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "578"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"American level friend tree.\",\n    \"content\": \"Per thousand local imagine. Thank against draw fact.\\nWonder because game style religious. Measure thought kitchen develop state happen young.\\nWhen occur bed party method black real. Economy half later section leg.\\nAcross reduce without while agent. Top relate serve.\\nLanguage total blue training boy increase go. Federal grow make oil method star computer. Reality mouth recently right soon tax.\",\n    \"author\": 3,\n    \"average_rate\": 1.94,\n    \"user_rate\": 1.98,\n    \"user_rate_count\": 2,\n    \"created_at\": \"2024-11-26\",\n    \"updated_at\": \"2024-11-26\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add-score",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts/add-score/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"add-score",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post\": 3,\n    \"score\": 3.4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/posts/add-score/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"add-score",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:24:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 57,\n    \"post\": 3,\n    \"score\": 3.4,\n    \"created_at\": \"2024-11-27\"\n}"
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"salam\",\n    \"email\":\"salam@gmail.com\",\n    \"password\": \"@bcd1234\",\n    \"password2\": \"@bcd1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"salam\",\n    \"email\":\"salam@gmail.com\",\n    \"password\": \"@bcd1234\",\n    \"password2\": \"@bcd1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:26:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=xo7BJIMtPfcfCVEJmOxFXtLsLKkop8dW; expires=Wed, 26 Nov 2025 23:26:33 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=xr3z3rugaw9wwysms8vo0xo6fo4k8h0q; expires=Wed, 11 Dec 2024 23:26:33 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Successfully registered and logged in.\",\n    \"username\": \"salam\",\n    \"email\": \"salam@gmail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"salam\",\n    \"password\": \"@bcd1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"salam\",\n    \"password\": \"@bcd1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:34:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=f2T6TR78YIsANAhPGKqj00xvbfqhs0sf; expires=Wed, 26 Nov 2025 23:34:18 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=xr3z3rugaw9wwysms8vo0xo6fo4k8h0q; expires=Wed, 11 Dec 2024 23:34:18 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Successfully logged in.\",\n    \"username\": \"salam\"\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/logout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "lnMmr7V0QMpfHRJup9XIv432z7WncHWn",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/logout/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Nov 2024 23:35:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=\"\"; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Successfully logged out.\"\n}"
+				}
+			]
+		}
+	]
+}
