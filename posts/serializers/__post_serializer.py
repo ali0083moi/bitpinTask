@@ -21,6 +21,12 @@ class PostSerializer(serializers.ModelSerializer):
     def get_user_rate_count(self, obj):
         return obj.rates.filter(is_active=True).count() or 0
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation["created_at"] = instance.created_at.strftime("%Y-%m-%d")
+        representation["updated_at"] = instance.updated_at.strftime("%Y-%m-%d")
+        return representation
+
     class Meta:
         model = Post
         fields = [
