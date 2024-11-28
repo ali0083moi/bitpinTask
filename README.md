@@ -110,7 +110,14 @@ String password
 - `POST /api/auth/login/`: Login user
 - `POST /api/auth/logout/`: Logout user
 
-### Using the API
+### Posts
+
+- `GET /api/posts/posts/`: List all posts with ratings
+- `GET /api/posts/posts/<id>/`: Get specific post details
+- `POST /api/posts/add-score/`: Add rating to a post
+- `POST /api/posts/add-post/`: Create a new post
+
+## Using the API
 
 For easier API testing, you can use my Postman collection. When making requests:
 
@@ -126,13 +133,6 @@ For easier API testing, you can use my Postman collection. When making requests:
    ```
 
 You can obtain these values after logging in through the browser or initial authentication request.
-
-### Posts
-
-- `GET /api/posts/posts/`: List all posts with ratings
-- `GET /api/posts/posts/<id>/`: Get specific post details
-- `POST /api/posts/add-score/`: Add rating to a post
-- `POST /api/posts/add-post/`: Create a new post
 
 ## Cron Jobs
 
