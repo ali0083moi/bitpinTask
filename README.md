@@ -132,6 +132,7 @@ You can obtain these values after logging in through the browser or initial auth
 - `GET /api/posts/posts/`: List all posts with ratings
 - `GET /api/posts/posts/<id>/`: Get specific post details
 - `POST /api/posts/add-score/`: Add rating to a post
+- `POST /api/posts/add-post/`: Create a new post
 
 ## Cron Jobs
 
