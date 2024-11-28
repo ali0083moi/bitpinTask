@@ -155,7 +155,7 @@ crontab -e
 3. Add the following line to run every
 
 ```bash
-0 * * * * /path/to/your/scripts/run_pending_rates.sh
+0 2 * * * /path/to/your/scripts/run_pending_rates.sh
 ```
 
 4. Verify cron job is added:
@@ -169,9 +169,9 @@ Note: Replace `/path/to/your` with the actual absolute path to your project dire
 The cron schedule explained:
 
 - `0`: Minute (0-59)
-- `*`: Hour (0-23)
+- `2`: Hour (2 AM)
 - `*`: Day of month (1-31)
 - `*`: Month (1-12)
 - `*`: Day of week (0-6, 0 is Sunday)
 
-This configuration will run the pending rates processing script at the beginning of every hour.
+This configuration will run the pending rates processing script at 2 AM every day.
