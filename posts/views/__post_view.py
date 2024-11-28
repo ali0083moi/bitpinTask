@@ -58,3 +58,8 @@ class RecievePostDetailView(generics.RetrieveAPIView):
         post._cached_average_score = stats["avg_score"]
         post._cached_rate_count = stats["rate_count"]
         return post
+
+
+class AddPostView(generics.CreateAPIView):
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()

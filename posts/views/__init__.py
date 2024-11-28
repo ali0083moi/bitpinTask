@@ -1,2 +1,2 @@
-from .__add_score import AddScoreView
-from .__recieve_posts import RecievePostsView, RecievePostDetailView
+from .__score_view import AddScoreView
+from .__post_view import RecievePostsView, RecievePostDetailView, AddPostView
